@@ -1,0 +1,23 @@
+{
+  "name": "gulu2",
+  "version": "1.0.0",
+  "description": "我开始学习造轮子\r 我很开心",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyjava123321aa/gulu2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happyjava123321aa/gulu2/issues"
+  },
+  "homepage": "https://github.com/happyjava123321aa/gulu2#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}
