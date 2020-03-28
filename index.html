@@ -6,6 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+            /*定义变量的写法*/
+
+            :root{
+                --button-height:32px;
+                --button-font:14px;
+                --button-bgcolor:#fff;
+                --button-borcolor:#999;
+            }
+            /*// 使用变量*/
+            .jbutton{
+                height: var(--button-height);
+                font-size: var(--button-font);
+                background-color: var(--button-bgcolor);
+                 background: 1px solid var(--button-borcolor);
+            }
+        .jbutton:hover{
+            border: 1px solid rgba(153,153,153,1);
+        }
+
+    </style>
 </head>
 <body>
     <div id="app">

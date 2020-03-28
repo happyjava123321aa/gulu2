@@ -2,6 +2,6 @@
 
 Vue.component("j-button",{
     template:`
-        <button>jbutton</button>
+        <button class="jbutton">jbutton</button>
     `
 });
