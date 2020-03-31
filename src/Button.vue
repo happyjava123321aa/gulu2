@@ -1,5 +1,9 @@
 <template>
-        <button class="jbutton">1234</button>
+        <button class="jbutton">
+                <svg>
+                    <use xlink:href="#i-you"></use>
+                </svg>
+                1234</button>
 </template>
 
 <script>
