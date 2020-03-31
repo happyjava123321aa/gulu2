@@ -1,14 +1,21 @@
 <template>
         <button class="jbutton">
-                <svg class="icon">
-                    <use xlink:href="#i-you"></use>
-                </svg>
+                <SymbolIcon></SymbolIcon>
                 1234</button>
 </template>
 
 <script>
+    import SymbolIcon  from "./SymbolIcon";
     export  default  {
+        data(){
+            return {
 
+            }
+        },
+        components:{
+            //局部注册
+            SymbolIcon
+        }
     }
 </script>
 
@@ -31,12 +38,4 @@
     .jbutton:hover{
         border: 1px solid rgba(153,153,153,1);
     }
-    .icon {
-        width:1em;
-        height:1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden
-    }
-
 </style>
