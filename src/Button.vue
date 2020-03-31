@@ -1,6 +1,6 @@
 <template>
         <button class="jbutton">
-                <SymbolIcon></SymbolIcon>
+                <SymbolIcon name="i-shezhi"></SymbolIcon>
                 1234</button>
 </template>
 

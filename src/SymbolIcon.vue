@@ -1,13 +1,23 @@
 <template>
     <svg class="icon">
-        <use xlink:href="#i-you"></use>
+        <use :xlink:href=`#${name}`></use>
     </svg>
 
 </template>
 
 <script>
     export  default  {
+        data(){
+            return {
 
+            }
+        },
+        props:{
+            name:{
+                type:String,
+                default:"i-you"
+            }
+        }
     }
 </script>
 
