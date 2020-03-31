@@ -6,10 +6,10 @@
         <button  class="jbutton">
                 <template v-if="isLeft==='true'|| !isLeft">
                         <SymbolIcon name="i-shezhi"></SymbolIcon>
-                        1234
+                        <slot></slot>
                 </template>
                 <template v-else>
-                        1234
+                        <slot></slot>
                         <SymbolIcon name="i-shezhi"></SymbolIcon>
                 </template>
              </button>
