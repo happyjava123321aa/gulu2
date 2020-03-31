@@ -1,7 +1,20 @@
 <template>
-        <button class="jbutton">
-                <SymbolIcon name="i-shezhi"></SymbolIcon>
-                1234</button>
+<!--    在这个组件中，我们想控制以下图标的位置
+        是在左边还是在右边
+-->
+
+        <button  class="jbutton">
+                <template v-if="isLeft==='true'|| !isLeft">
+                        <SymbolIcon name="i-shezhi"></SymbolIcon>
+                        1234
+                </template>
+                <template v-else>
+                        1234
+                        <SymbolIcon name="i-shezhi"></SymbolIcon>
+                </template>
+             </button>
+
+
 </template>
 
 <script>
@@ -12,6 +25,7 @@
 
             }
         },
+        props:['isLeft'],
         components:{
             //局部注册
             SymbolIcon
