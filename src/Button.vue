@@ -1,18 +1,13 @@
 <template>
 <!--    在这个组件中，我们想控制以下图标的位置
         是在左边还是在右边
+        我们采用flex 布局来解决位置问题
 -->
 
-        <button  class="jbutton">
-                <template v-if="isLeft==='true'|| !isLeft">
-                        <SymbolIcon :name="name"></SymbolIcon>
-                        <slot></slot>
-                </template>
-                <template v-else>
-                        <slot></slot>
-                        <SymbolIcon :name="name"></SymbolIcon>
-                </template>
-             </button>
+        <button  :class="['jbutton',{'isRight':positionType==='right'}]">
+                        <SymbolIcon class="sbIcon" :name="name"></SymbolIcon>
+            <span class="jbutton-content"> <slot ></slot></span>
+        </button>
 
 
 </template>
@@ -26,10 +21,13 @@
             }
         },
         props: {
-                isLeft: {},
                 name: {
                         type: String,
                         default: "i-you"
+                },
+                positionType: {
+                    type: String,
+                    default: "left"
                 }
         }
         ,
@@ -55,8 +53,26 @@
         font-size: var(--button-font);
         background-color: var(--button-bgcolor);
         background: 1px solid var(--button-borcolor);
+        display: flex;
+        align-items:center
     }
-    .jbutton:hover{
+    .jbutton .sbIcon{
+            order:10
+    }
+
+    .jbutton .jbutton-content{
+            order:20
+    }
+
+   .jbutton:hover{
         border: 1px solid rgba(153,153,153,1);
     }
+
+    .isRight  .sbIcon{
+        order:20
+    }
+    .isRight .jbutton-content{
+        order:10
+    }
+
 </style>
