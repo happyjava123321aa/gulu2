@@ -20,7 +20,7 @@
 
             }
         },
-        props: {
+        props:{
                 name: {
                         type: String,
                         default: "i-you"
@@ -57,7 +57,9 @@
         align-items:center
     }
     .jbutton .sbIcon{
-            order:10
+            order:10;
+            margin-right: .3em;
+
     }
 
     .jbutton .jbutton-content{
@@ -69,10 +71,12 @@
     }
 
     .isRight  .sbIcon{
-        order:20
+        order:20; margin-left: .5em;
     }
     .isRight .jbutton-content{
-        order:10
+        order:10;
+
+
     }
 
 </style>
