@@ -5,12 +5,12 @@
 
         <button  class="jbutton">
                 <template v-if="isLeft==='true'|| !isLeft">
-                        <SymbolIcon name="i-shezhi"></SymbolIcon>
+                        <SymbolIcon :name="name"></SymbolIcon>
                         <slot></slot>
                 </template>
                 <template v-else>
                         <slot></slot>
-                        <SymbolIcon name="i-shezhi"></SymbolIcon>
+                        <SymbolIcon :name="name"></SymbolIcon>
                 </template>
              </button>
 
@@ -25,7 +25,14 @@
 
             }
         },
-        props:['isLeft'],
+        props: {
+                isLeft: {},
+                name: {
+                        type: String,
+                        default: "i-you"
+                }
+        }
+        ,
         components:{
             //局部注册
             SymbolIcon
