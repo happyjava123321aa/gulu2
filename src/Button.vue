@@ -1,6 +1,6 @@
 <template>
         <button class="jbutton">
-                <svg>
+                <svg class="icon">
                     <use xlink:href="#i-you"></use>
                 </svg>
                 1234</button>
@@ -30,6 +30,13 @@
     }
     .jbutton:hover{
         border: 1px solid rgba(153,153,153,1);
+    }
+    .icon {
+        width:1em;
+        height:1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden
     }
 
 </style>
